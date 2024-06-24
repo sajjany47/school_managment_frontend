@@ -172,6 +172,7 @@
   line-height: 50px;
   font-size: 18px;
   border-radius: 12px;
+  margin-top: 4px;
 }
 .sidebar li.profile {
   position: fixed;

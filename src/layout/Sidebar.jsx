@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { MdOutlineDashboardCustomize } from "react-icons/md";
 
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <>
@@ -12,6 +13,7 @@ const Sidebar = () => {
             <i
               className="pi pi-bars bx bxl-codepen"
               onClick={() => setIsOpen(true)}
+              style={{ cursor: "pointer" }}
             />
           )}
           <div className="logo_name">SideMenu</div>
@@ -27,7 +29,9 @@ const Sidebar = () => {
         <ul className="nav-list">
           <li>
             <a href="#">
-              <i className="bx bx-grid-alt" />
+              <i className="bx bx-grid-alt">
+                <MdOutlineDashboardCustomize />
+              </i>
               <span className="links_name">Dashboard</span>
             </a>
             <span className="tooltip">Dashboard</span>
