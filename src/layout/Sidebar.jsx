@@ -30,11 +30,11 @@ const Sidebar = () => {
     <>
       <div className="sidebar">
         <div className="logo-details">
-          <i className="bx bxl-codepen icon" />
-          {/* <i className="pi pi-bars bx"></i> */}
+          {/* <i className="bx bxl-codepen icon" /> */}
+          <i className="pi pi-bars bx"></i>
           <div className="logo_name">SideMenu</div>
-          <i className="bx bx-menu" id="btn" />
-          {/* <i className="pi pi-angle-left" id="btn" /> */}
+          {/* <i className="bx bx-menu" id="btn" /> */}
+          <i className="pi pi-angle-left bx" id="btn" />
         </div>
         <ul className="nav-list">
           <li>
