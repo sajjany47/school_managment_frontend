@@ -1,40 +1,28 @@
-import { useEffect } from "react";
+import { useState } from "react";
 
 const Sidebar = () => {
-  useEffect(() => {
-    const sidebar = document.querySelector(".sidebar");
-    const closeBtn = document.querySelector("#btn");
-
-    const handleButtonClick = () => {
-      sidebar.classList.toggle("open");
-      menuBtnChange();
-    };
-
-    const menuBtnChange = () => {
-      if (sidebar.classList.contains("open")) {
-        closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
-      } else {
-        closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
-      }
-    };
-
-    closeBtn.addEventListener("click", handleButtonClick);
-
-    // Cleanup event listener on component unmount
-    return () => {
-      closeBtn.removeEventListener("click", handleButtonClick);
-    };
-  }, []);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <div className="sidebar">
+      <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <div className="logo-details">
           {/* <i className="bx bxl-codepen icon" /> */}
-          <i className="pi pi-bars bx"></i>
+          {isOpen === false && (
+            <i
+              className="pi pi-bars bx bxl-codepen"
+              onClick={() => setIsOpen(true)}
+            />
+          )}
           <div className="logo_name">SideMenu</div>
           {/* <i className="bx bx-menu" id="btn" /> */}
-          <i className="pi pi-angle-left bx" id="btn" />
+          {isOpen === true && (
+            <i
+              className="pi pi-angle-left bx bx-menu"
+              id="btn"
+              onClick={() => setIsOpen(false)}
+            />
+          )}
         </div>
         <ul className="nav-list">
           <li>
