@@ -1,12 +1,11 @@
-import "../node_modules/primeflex/primeflex.css";
 import "./App.css";
-import "../node_modules/primeicons/primeicons.css";
-import Sidebar from "./layout/Sidebar";
+import { Sidebar1 } from "./layout/Sidebar1";
 
 function App() {
   return (
     <>
-      <Sidebar />
+      <Sidebar1 />
+      {/* <Sidebar /> */}
     </>
   );
 }

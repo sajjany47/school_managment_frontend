@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
+import TopBar from "./TopBar";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -97,6 +98,7 @@ const Sidebar = () => {
         </ul>
       </div>
       <section className="home-section">
+        <TopBar />
         <div className="text">Dashboard</div>
       </section>
     </>
