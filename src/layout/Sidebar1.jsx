@@ -1,4 +1,4 @@
-import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
+import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 
 export const Sidebar1 = () => {
   return (
@@ -16,7 +16,10 @@ export const Sidebar1 = () => {
             },
           }}
         >
-          <MenuItem> Documentation</MenuItem>
+          <SubMenu label="Charts">
+            <MenuItem> Pie charts </MenuItem>
+            <MenuItem> Line charts </MenuItem>
+          </SubMenu>
           <MenuItem> Calendar</MenuItem>
           <MenuItem> E-commerce</MenuItem>
           <MenuItem> Documentation</MenuItem>
